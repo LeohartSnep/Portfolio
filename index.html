@@ -4,9 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fan Page Alan Walker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pagina Fan de Alan Walker</title>
+    
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">Alan Walker Fan Page</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="navbar-dropdown">
+                    <a href="#">Álbumes</a>
+                    <ul class="navbar-dropdown-content">
+                        <li><a href="https://open.spotify.com/album/3nzuGtN3nXARvvecier4K0?si=ithy4fkfTpqS4HH-HvtMvA">Different World</a></li>
+                        <li><a href="https://open.spotify.com/album/3KrkQ77DF9OUB0aOzKFYOF?si=rLudsHXYScycYzwDv3QtDw">World of Walkers</a></li>
+                        <li><a href="https://open.spotify.com/album/6kbiBMllsbGVYMAy8YJKs9?si=JR9U03_XSFyP-ZxVbD2NSA">Walkerverse</a></li>
+                    </ul>
+                <li class="navbar-dropdown">
+                    <a href="#">Redes Sociales</a>
+                    <ul class="navbar-dropdown-content">
+                        <li><a href="https://www.instagram.com/alanwalkermusic/">Instagram</a></li>
+                        <li><a href="https://twitter.com/iamalanwalker?lang=es">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/alanwalkermusic/">Facebook</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>           
+    </header>
+    <section id="inicio">
+        <h2>Bienvenido a la página de fans de Alan Walker</h2>
+        <p>Esta página está dedicada al talentoso músico Alan Walker y su música electrónica.</p>
+    </section>
+
+    <section id="biografia">
+        <h2>Biografía de Alan Walker</h2>
+        <p>Alan Walker nació el 24 de agosto de 1997 en Northampton, Reino Unido,​ hijo del británico Philip Alan Walker y su esposa noruega Hilde Omdal Walker. Como resultado, por su herencia parental internacional, se le concedió la doble ciudadanía tanto del Reino Unido como de Noruega. Walker, a la edad de dos años, junto con su familia, se mudó a Bergen. con dos hermanos, una hermana mayor, Camilla, nacida en Reino Unido, y un hermano menor, Andreas, nacido en Noruega. Más tarde, Walker encontró interés en las computadoras, un pasatiempo que lo ha llevado más profundamente al diseño gráfico informático y la programación musical. Inicialmente no tenía antecedentes musicales, pero pudo aprender por sí mismo viendo tutoriales de YouTube basados en la producción musical.</p>
+    </section>
+
+    <section id="musica">
+        <h2>Música de Alan Walker</h2>
+        <h3>Discografía</h3>
+        <ul>
+            <li>Álbum: "Different World" (2018)</li>
+            <li>Sencillo: "Faded" (2015)</li>
+            <li>Sencillo: "Alone" (2016)</li>
+            <!-- Agrega más canciones o álbumes según sea necesario -->
+        </ul>
+        <h3>Reproductor de música</h3>
+        <audio id="audio-player" src="media/Alan Walker x Jamie Miller - Running Out Of Roses (Official Lyric Video).mp4" controls></audio>
+        <p>Aca dejo uno de mis temas favoritos en mi opinion muy bueno</p>
+        <p id="song-name"></p>
+    </section>
+
+    <section id="videos">
+        <h2>Videos de Alan Walker</h2>
+        <a href="media/Alan Walker x Jamie Miller - Running Out Of Roses (Official Lyric Video).mp4" download>Descargar video</a>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Az-mGR-CehY?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- dejo el video para que se descargue junto con el archivo ya que no pude hacer para que pueda verse en la pagina -->
+        <!--pongo solo un video para descargar ya que visto y considerando el unico video que no tiene copyright de este dj es Ignite porque es una cancion dedicada como regalo a su comunidad el otro video para descargar es el de la cancion de audio arriba-->
+    </section>
+
+    <section class="image-section">
+        <h2>Galería de Alan Walker</h2>
+        <br>
+        <img src="images/imagen 1.jpg" alt="Alan Walker Fan Art">
+        <br>
+        <img src="images/HD-wallpaper-alan-walker-blue-logo-norwegian-djs-blue-neon-lights-creative-blue-abstract-background-alan-olav-walker-alan-walker-logo-music-stars-alan-walker.jpg" alt="Logo Alan Walker">
+        <!-- Agrega más imágenes según sea necesario -->
+    </section>
+    <script>
+        var audioPlayer = document.getElementById('audio-player');
+        var songName = document.getElementById('song-name');
+      
+        // Obtén el nombre de la canción y actualiza el elemento <p>
+        audioPlayer.addEventListener('loadedmetadata', function() {
+          var songTitle = audioPlayer.currentSrc.split('/').pop().split('.')[0];
+          songName.innerText = songTitle;
+        });
+      </script>
 </body>
 </html>
